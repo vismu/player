@@ -1,0 +1,19 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "react-redux-player",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vismu/player.git"
+  },
+  "author": "Gavrilov S.O.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vismu/player/issues"
+  },
+  "homepage": "https://github.com/vismu/player#readme"
+}

@@ -1,12 +1,13 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {isPlaying, isControlsVisible} from 'app/selectors/Player';
-import {startPlaying, pausePlaying, showControls, hideControls} from 'app/actions/Player';
+import {isPlaying, isControlsVisible, getPlayerInfo} from 'app/selectors/Player';
+import {startPlaying, pausePlaying, showControls, hideControls, getPlayerInfoRequest} from 'app/actions/Player';
 import Player from 'app/components/Player';
 
 const mapStateToProps = (state) => ({
 	isPlaying: isPlaying(state),
 	isControlsVisible: isControlsVisible(state),
+	getPlayerInfo: getPlayerInfo(state),
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
@@ -14,6 +15,7 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
 	pausePlaying,
 	showControls,
 	hideControls,
+	getPlayerInfoRequest,
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Player);

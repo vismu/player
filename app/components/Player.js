@@ -9,7 +9,24 @@ export default class Player extends React.PureComponent {
 		pausePlaying: PropTypes.func.isRequired,
 		showControls: PropTypes.func.isRequired,
 		hideControls: PropTypes.func.isRequired,
+		getPlayerInfoRequest: PropTypes.func.isRequired,
+		playerInfo: PropTypes.shape({
+			title: PropTypes.string.isRequired,
+			url: PropTypes.string.isRequired,
+		})
 	};
+
+	static defaultProps = {
+		playerInfo: null,
+	}
+
+	componentDidMount() {
+		const {getPlayerInfoRequest, showControls, startPlaying} = this.props;
+
+		getPlayerInfoRequest()
+			.then(showControls)
+			.then(startPlaying);
+	}
 
 	render() {
 		return (<div />);

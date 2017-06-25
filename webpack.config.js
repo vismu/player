@@ -8,7 +8,7 @@ var cssnext = require('postcss-cssnext');
 
 module.exports = {
 	entry: {
-		app: ['./app/index.js']
+		app: ['app/index.js']
 	},
 	output: {
 		path: path.resolve(__dirname, 'build'),
@@ -19,6 +19,7 @@ module.exports = {
 		mainFields: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main'],
 		alias: {
 			'app': path.resolve('./app'),
+			'test': path.resolve('./test'),
 		}
 	},
 	module: {
@@ -45,12 +46,13 @@ module.exports = {
 			allChunks: true
 		}),
 		new HtmlWebpackPlugin({
-			template: './app/index.html',
+			template: 'app/index.html',
 			inject: 'body',
 			hash: true,
 		}),
 		new CopyWebpackPlugin([
 			{from: 'app/img', to: 'img'},
+			{from: 'test/__mocks__/playerInfo.json', to: 'player_info.json'},
 		]),
 	],
 };

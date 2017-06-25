@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var postcssSimpleVars = require('postcss-simple-vars');
 var postcssImport = require('postcss-import');
 var cssnext = require('postcss-cssnext');
@@ -48,5 +49,8 @@ module.exports = {
 			inject: 'body',
 			hash: true,
 		}),
+		new CopyWebpackPlugin([
+			{from: 'app/img', to: 'img'},
+		]),
 	],
 };

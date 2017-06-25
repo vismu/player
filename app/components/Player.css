@@ -1,0 +1,61 @@
+.player {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	&-header,
+	&-controls {
+		display: flex;
+		align-items: center;
+		padding: 30px;
+		height: 100px;
+		height: 100px;
+		width: 100%;
+	}
+	&-header {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+		&__title {
+			font-size: 20px;
+			color: #fff;
+		}
+	}
+	&-controls {
+		position: absolute;
+		bottom: 0;
+		background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+		&__btn {
+			outline: none;
+			border: none;
+			background: none;
+			cursor: pointer;
+			padding: 5px;
+			height: 26px;
+			width: 26px;
+		}
+		&__icon {
+			width: 16px;
+			height: 16px;
+		}
+		&-sound {
+			display: flex;
+			align-items: center;
+			margin-left: 20px;
+			flex-grow: 1;
+			&__bar,
+			&__level {
+				cursor: pointer;
+				height: 4px;
+				border-radius: 2px;
+				background-color: #fff;
+			}
+			&__bar {
+				width: 50px;
+				background-color: #bebebe;
+			}
+		}
+		&__time {
+			color: #fff;
+			margin: 0 25px;
+		}
+	}
+}

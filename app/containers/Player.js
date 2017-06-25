@@ -7,7 +7,7 @@ import Player from 'app/components/Player';
 const mapStateToProps = (state) => ({
 	isPlaying: isPlaying(state),
 	isControlsVisible: isControlsVisible(state),
-	getPlayerInfo: getPlayerInfo(state),
+	playerInfo: getPlayerInfo(state),
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

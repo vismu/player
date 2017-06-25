@@ -2,9 +2,7 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var postcssSimpleVars = require('postcss-simple-vars');
-var postcssImport = require('postcss-import');
-var cssnext = require('postcss-cssnext');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
 	entry: {
@@ -35,8 +33,10 @@ module.exports = {
 				loader: 'postcss-loader',
 				options: {
 					ident: 'postcss',
-					plugins: () => [postcssImport, postcssSimpleVars, cssnext]
+					plugins: () => [autoprefixer]
 				}
+			}, {
+				loader: 'sass-loader',
 			}]
 		}]
 	},

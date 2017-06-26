@@ -94,7 +94,7 @@ export default class Player extends React.PureComponent {
 		this.controlsVisibilityTimer = setTimeout(() => {
 			this.props.hideControls();
 			this.controlsVisibilityTimer = null;
-		}, 50000);
+		}, 5000);
 	}
 
 	handlePlay = () => {

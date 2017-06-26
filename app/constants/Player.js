@@ -1,5 +1,11 @@
 export const START_PLAYING = 'START_PLAYING';
 export const PAUSE_PLAYING = 'PAUSE_PLAYING';
+export const MUTE = 'MUTE';
+export const UNMUTE = 'UNMUTE';
 export const SHOW_CONTROLS = 'SHOW_CONTROLS';
 export const HIDE_CONTROLS = 'HIDE_CONTROLS';
+export const OPEN_FULLSCREEN = 'OPEN_FULLSCREEN';
+export const CLOSE_FULLSCREEN = 'CLOSE_FULLSCREEN';
+export const SET_TIME = 'SET_TIME';
+export const SET_VOLUME = 'SET_VOLUME';
 export const SET_PLAYER_INFO = 'SET_PLAYER_INFO';

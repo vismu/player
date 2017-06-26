@@ -11,3 +11,11 @@ body,
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+
+video::-webkit-media-controls {
+	display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+	display: none !important;
+}
